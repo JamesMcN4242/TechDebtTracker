@@ -3,16 +3,16 @@
 /////   James McNeil - 2021
 ////////////////////////////////////////////////////////////
 
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public static class ToolbarBuilder
 {
-    [MenuItem("TechDebt/Display")]
+    [MenuItem("TechDebt/Create HTML File")]
     public static void OutputTechDebt()
     {
-        List<TechDebtTracker.TechDebtAttribute> attributes = TechDebtTracker.TechDebtCollector.CollectListedTechDebt();
-        Debug.Log($"Retrieved a total of {attributes.Count} attributes");
+        TechDebtTracker.DebtFormatter.CreateHTMLDebtList("Assets/outputHtml.html");
+        AssetDatabase.Refresh();
+        Debug.Log($"Finished writing to file");
     }
 }
