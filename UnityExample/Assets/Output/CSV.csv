@@ -1,0 +1,12 @@
+Name,Description,Severity,Growth Speed
+,,
+Class Type,The body goes here,EXTREME,MEDIUM
+Class Method,,UNSET,UNSET
+Public Static Method,,UNSET,UNSET
+Private Static Method,,UNSET,UNSET
+Class Variable,,UNSET,UNSET
+Private Static Variable,,UNSET,UNSET
+Public Static Variable,,UNSET,UNSET
+Interface Type,,UNSET,UNSET
+Interface Method,,UNSET,UNSET
+Enum Type,,UNSET,UNSET

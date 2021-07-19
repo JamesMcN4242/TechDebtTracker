@@ -18,13 +18,32 @@ namespace TechDebtTracker
                 $"\n<body>\n<h1>Tech Debt {DateTime.Today.Date.ToString("dd/MM/yyyy")}</h1>\n\n" +
                 $"<table>\n<tr>\n<th>Name</th>\n<th>Description</th>\n<th>Severity</th>\n<th>Growth Speed</th>\n</tr>\n";
 
-            StringBuilder stringFormatter = new StringBuilder(htmlHeader);
+            StringBuilder stringBuilder = new StringBuilder(htmlHeader);
             var techDebt = TechDebtCollector.CollectListedTechDebt();
+
             foreach (TechDebtAttribute debt in techDebt)
             {
-                stringFormatter.AppendFormat(rowFormat, debt.Name, debt.Message, debt.Severity, debt.GrowthSpeed);
+                stringBuilder.AppendFormat(rowFormat, debt.Name, debt.Message, debt.Severity, debt.GrowthSpeed);
             }
-            File.WriteAllText(outputLocation, stringFormatter.ToString());
+            stringBuilder.Append("\n<body>\n</html>");
+
+            File.WriteAllText(outputLocation, stringBuilder.ToString());
+        }
+
+        public static void CreateCSVDebtList(string outputLocation)
+        {
+            const string rowFormat = "{0},{1},{2},{3}\n";
+            string csvHeader = $"Name,Description,Severity,Growth Speed\n,,\n";
+
+            StringBuilder stringBuilder = new StringBuilder(csvHeader);
+            var techDebt = TechDebtCollector.CollectListedTechDebt();
+
+            foreach (TechDebtAttribute debt in techDebt)
+            {
+                stringBuilder.AppendFormat(rowFormat, debt.Name, debt.Message, debt.Severity, debt.GrowthSpeed);
+            }
+
+            File.WriteAllText(outputLocation, stringBuilder.ToString());
         }
     }
 }
