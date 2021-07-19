@@ -7,6 +7,7 @@ using System;
 
 namespace TechDebtTracker
 {
+    [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = true)]
     public class TechDebtAttribute : Attribute
     {
         private string m_name = "";
