@@ -11,7 +11,7 @@ public static class ToolbarBuilder
     [MenuItem("TechDebt/Create HTML File")]
     public static void OutputTechDebtHTML()
     {
-        TechDebtTracker.DebtFormatter.CreateHTMLDebtList("Assets/Output/Html.html");
+        TechDebtTracker.DebtOutputter.CreateHTMLDebtList("Assets/Output/HTML.html");
         AssetDatabase.Refresh();
         Debug.Log($"Finished writing to file");
     }
@@ -19,7 +19,7 @@ public static class ToolbarBuilder
     [MenuItem("TechDebt/Create CSV File")]
     public static void OutputTechDebtCSV()
     {
-        TechDebtTracker.DebtFormatter.CreateCSVDebtList("Assets/Output/CSV.csv");
+        TechDebtTracker.DebtOutputter.CreateCSVDebtList("Assets/Output/CSV.csv");
         AssetDatabase.Refresh();
         Debug.Log($"Finished writing to file");
     }

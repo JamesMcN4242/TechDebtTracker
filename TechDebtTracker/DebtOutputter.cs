@@ -1,5 +1,5 @@
 ﻿////////////////////////////////////////////////////////////
-/////   DebtFormatter.cs
+/////   DebtOutputter.cs
 /////   James McNeil - 2021
 ////////////////////////////////////////////////////////////
 
@@ -9,7 +9,7 @@ using System.Text;
 
 namespace TechDebtTracker
 {
-    public static class DebtFormatter
+    public static class DebtOutputter
     {
         public static void CreateHTMLDebtList(string outputLocation)
         {
