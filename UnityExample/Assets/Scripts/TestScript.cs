@@ -50,3 +50,7 @@ public interface IIntroExample
 [TechDebt(Name = "Enum Type")]
 public enum EnumVal
 { ONE_VAL, TWO_VAL }
+
+
+[TechDebt(Name = "Struct Type")]
+public struct StructTest { }
