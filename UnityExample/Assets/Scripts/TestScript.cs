@@ -6,7 +6,7 @@
 using UnityEngine;
 using TechDebtTracker;
 
-[TechDebt(Name = "Class Type", Message = "The body goes here", Severity = SeverityLevel.EXTREME, GrowthSpeed = GrowthSpeed.MEDIUM)]
+[TechDebt(Name = "Class Type", Description = "The body goes here", Severity = SeverityLevel.EXTREME, GrowthSpeed = GrowthSpeed.MEDIUM)]
 public class TestScript : MonoBehaviour
 {
     [TechDebt(Name = "Class Variable")]
@@ -22,7 +22,6 @@ public class TestScript : MonoBehaviour
     [TechDebt(Name = "Class Method")]
     void Start()
     {
-        int attempt = 5;
     }
 
     // Update is called once per frame

@@ -11,7 +11,7 @@ namespace TechDebtTracker
     public class TechDebtAttribute : Attribute
     {
         private string m_name = "";
-        private string m_message = "";
+        private string m_description = "";
         private SeverityLevel m_severity = SeverityLevel.UNSET;
         private GrowthSpeed m_growthSpeed = GrowthSpeed.UNSET;
         
@@ -23,10 +23,10 @@ namespace TechDebtTracker
             set => m_name = value;
         }
 
-        public virtual string Message
+        public virtual string Description
         {
-            get => m_message;
-            set => m_message = value;
+            get => m_description;
+            set => m_description = value;
         }
 
         public virtual SeverityLevel Severity

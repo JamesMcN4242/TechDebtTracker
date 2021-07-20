@@ -23,7 +23,7 @@ namespace TechDebtTracker
 
             foreach (TechDebtAttribute debt in techDebt)
             {
-                stringBuilder.AppendFormat(rowFormat, debt.Name, debt.Message, debt.Severity, debt.GrowthSpeed);
+                stringBuilder.AppendFormat(rowFormat, debt.Name, debt.Description, debt.Severity, debt.GrowthSpeed);
             }
             stringBuilder.Append("\n<body>\n</html>");
 
@@ -40,7 +40,7 @@ namespace TechDebtTracker
 
             foreach (TechDebtAttribute debt in techDebt)
             {
-                stringBuilder.AppendFormat(rowFormat, debt.Name, debt.Message, debt.Severity, debt.GrowthSpeed);
+                stringBuilder.AppendFormat(rowFormat, debt.Name, debt.Description, debt.Severity, debt.GrowthSpeed);
             }
 
             File.WriteAllText(outputLocation, stringBuilder.ToString());
